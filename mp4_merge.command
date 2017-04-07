@@ -9,6 +9,9 @@
 #
 #This file works for merging .mp4 .MP4 .AVI
 #
+#ffmpeg -i tnt.AVI -vcodec copy -an output_file.mp4
+#
+#
 #*************************
 
 #!/bin/bash
@@ -34,3 +37,7 @@ shift
 ls $inputFilename | perl -ne 'print "file $_"' > concat.list
 ffmpeg -f concat -i concat.list -c copy $outputFilename
 rm concat.list
+
+if [[ $outputFilename == *".AVI"* ]]; then
+  ffmpeg -i $outputFilename -vcodec copy -an $outputFilename.mp4
+fi
