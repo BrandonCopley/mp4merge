@@ -17,8 +17,11 @@
 
 cd "$(dirname "$0")" #navigates to current directory
 
+# -ss 00:00:01 Trims out the first second of footage this is due to the
+# fly 6 recording an additional 1 second at the start of every video
+
 for file in *.AVI; do
-  if ffmpeg -i $file -vcodec copy -an $file.mp4; then
+  if ffmpeg -ss 00:00:01 -i $file -vcodec copy -an $file.mp4; then
     rm -rf $file;
   fi
 done;
