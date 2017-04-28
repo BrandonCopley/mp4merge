@@ -1,16 +1,13 @@
 #**********INFO:**********
 #
-#This script must be copied into the folder containing the video files
-#In order for this file to be executable you must run the following:
+# This script must be copied into the folder containing the video files
+# In order for this file to be executable you must run the following:
 #
-#chmod +x mp4_merge.command
+# chmod +x mp4_merge.command
 #
-#This command will let the mp4_merge file run by double clicking it
+# This command will let the mp4_merge file run by double clicking it
 #
-#This file works for merging .mp4 .MP4 .AVI
-#
-#ffmpeg -i tnt.AVI -vcodec copy -an output_file.mp4
-#
+# This file works for merging .mp4 .MP4 .AVI
 #
 #*************************
 
